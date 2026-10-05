@@ -2,6 +2,7 @@ import java.net.URI
 
 plugins {
     id("java")
+    `maven-publish`
 }
 
 java {
@@ -11,13 +12,15 @@ java {
 }
 
 group = "me.firedragon5"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://repo1.maven.org/maven2/") }
+    maven { url = uri("https://jitpack.io") }
 }
 
-val lombokVersion = "1.18.40"
+val lombokVersion = "1.18.36"
 
 
 val downloadHytaleJar = tasks.register("downloadHytaleJar") {
