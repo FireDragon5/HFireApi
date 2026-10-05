@@ -1,0 +1,18 @@
+{
+  "Group": "me.firedragon5",
+  "Name": "HFireApi",
+  "Version": "1.0.0",
+  "Description": "",
+  "Authors": [
+    {
+      "Name": "FireDragon"
+    }
+  ],
+  "Website": "",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Main": "me.firedragon5.HFireApi",
+  "IncludesAssetPack": true
+}
