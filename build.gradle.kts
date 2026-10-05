@@ -23,13 +23,13 @@ val lombokVersion = "1.18.40"
 val downloadHytaleJar = tasks.register("downloadHytaleJar") {
     description = "Downloads the Hytale Server Jar if it does not exist in the libs directory."
     val libsDir = file("libs")
-    val jarFile = file("libs/hytale-server.jar")
+    val jarFile = file("libs/HytaleServer.jar")
 
     doLast {
         if (!jarFile.exists()) {
             libsDir.mkdirs()
             logger.lifecycle("Downloading Hytale Server Jar...")
-            val downloadUrl = URI("https://github.com/FireDragon5/H-FireApi/releases/download/v0.0.1/HytaleServer.jar").toURL()
+            val downloadUrl = URI("https://github.com/FireDragon5/HFireApi/releases/download/v0.0.1/HytaleServer.jar").toURL()
             downloadUrl.openStream().use { input ->
                 jarFile.outputStream().use { output ->
                     input.copyTo(output)
@@ -48,7 +48,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
-    compileOnly(files("libs/hytale-server.jar"))
+    compileOnly(files("libs/HytaleServer.jar"))
 
     // Lombok
     compileOnly("org.projectlombok:lombok:$lombokVersion")
