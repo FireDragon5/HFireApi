@@ -20,7 +20,7 @@ repositories {
     maven { url = uri("https://jitpack.io") }
 }
 
-val lombokVersion = "1.18.36"
+//val lombokVersion = "1.18.36"
 
 
 val downloadHytaleJar = tasks.register("downloadHytaleJar") {
@@ -54,11 +54,11 @@ dependencies {
     compileOnly(files("libs/HytaleServer.jar"))
 
     // Lombok
-    compileOnly("org.projectlombok:lombok:$lombokVersion")
-    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
-
-    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
-    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
+//    compileOnly("org.projectlombok:lombok:$lombokVersion")
+//    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+//
+//    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
+//    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
 }
 
 tasks.test {
