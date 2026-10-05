@@ -29,7 +29,7 @@ val downloadHytaleJar = tasks.register("downloadHytaleJar") {
         if (!jarFile.exists()) {
             libsDir.mkdirs()
             logger.lifecycle("Downloading Hytale Server Jar...")
-            val downloadUrl = URI("https://github.com/FireDragon5/H-FireApi/releases/download/v0.0.1/hytale-server.jar").toURL()
+            val downloadUrl = URI("https://github.com/FireDragon5/H-FireApi/releases/download/v0.0.1/HytaleServer.jar").toURL()
             downloadUrl.openStream().use { input ->
                 jarFile.outputStream().use { output ->
                     input.copyTo(output)
